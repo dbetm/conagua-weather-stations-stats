@@ -23,14 +23,6 @@ class Station:
     def __download_data(self) -> list:
         response = requests.get(url=self.url, stream=True)
 
-        all_data = {
-            "historic": None,
-            "station_name": "Unknown",
-            "latitude": None,
-            "longitude": None,
-            "altitude": None,
-        }
-
         if response.status_code != HTTPStatus.OK:
             raise Exception(
                 f"Error trying to download data file from: {self.url}. Status: {HTTPStatus.OK.value}"
