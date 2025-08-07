@@ -211,8 +211,9 @@ __marimo__/
 
 # Experiments
 exp.ipynb
+animation.ipynb
 
 # Data
 data/*.txt
 outputs/*.png
-outputs/valpa/*.png
+outputs/valpa/**/*.png
